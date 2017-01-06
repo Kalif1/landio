@@ -11,6 +11,7 @@
 body{
 	font-family: 'Raleway', sans-serif;
 	font-size: 15px;
+	color: #424753;
 }
 
 .container{
@@ -33,9 +34,9 @@ body{
 /*--------------MAIN PAGE----------------------*/
 .main-page{
 	height: 100vh;
-	widows: 100vw;
+	/*width: 100%;*/
 	background-image: url(img/bg-header.jpg);
-	background-size: 100vw 100vh;
+	background-size: 100wh 100vh;
 	background-repeat: no-repeat;
 	color: white;
 }
@@ -58,9 +59,23 @@ ul, .search-button{
 	margin-right: 25px;
 }
 
-.main-page ul li:hover{
+/*.main-page ul li:hover{
 	border-bottom: 2px solid rgba(255,255,255, 0.3);
 	padding-bottom: 6px;
+}*/
+
+.main-page ul li:after{
+	content: "";
+	display: block;
+	border-bottom: 2px solid rgba(255,255,255, 0.3);
+	padding-bottom: 6px;
+	transform: scaleX(0);
+	transition: transform 250ms linear;
+	transform-origin: 0% 100%;
+}
+
+.main-page ul li:hover:after{
+	transform: scaleX(1);
 }
 
 .menu-grey-point{
@@ -79,6 +94,10 @@ ul, .search-button{
 
 .search-button i{
 	font-size: 1.53em;
+}
+
+.profile-button{
+	cursor: pointer;
 }
 
 .search-button:hover i{
@@ -118,7 +137,7 @@ ul, .search-button{
 	margin-top: 100px;
 }
 
-.single-slide p{
+.single-slide > p{
 	font-size: 1.8em;
 	font-weight: 300;
 	margin-top: 15px;
@@ -130,10 +149,119 @@ ul, .search-button{
 
 .sketch-button{
 	border: 1px solid white;
-	border-radius: 25px;
-	width: 200px;
-	margin: 25px auto;
+	border-radius: 50px;
+	width: 300px;
+	height: 70px;
+	margin: 90px auto;
+
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	align-items: center;
 }
+
+.sketch-button:hover{
+	/*opacity: 0.6;*/
+	cursor: pointer;
+
+	animation: opacity 1s ease-in-out 1;
+	animation-fill-mode: forwards;  
+}
+
+@-webkit-keyframes opacity{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.3;
+	}
+	100%{
+		opacity: 0.6;
+	}
+}
+
+.sketch-button p{
+	font-size: 1.2em;
+	font-weight: 500;
+	height: 21px;
+	margin-left: 10px;
+}
+
+.sketch-button i{
+	font-size: 2em;
+	margin-left: 45px;
+}
+
+.social-buttons-slider{
+	display: flex;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.single-social-btt{
+	display: inline-flex;
+	flex: 1;
+}
+
+.single-social-btt:first-of-type:after, .single-social-btt:nth-of-type(2):after{
+	content: "";
+	display: block;
+	border-right: 1px solid white;
+	padding-right: 18px;
+}
+
+.single-social-btt i{
+	margin-right: 5px;
+	font-size: 1.3em;
+	margin-left: 15px;
+}
+
+.single-social-btt p{
+	font-weight: 700;
+	font-size: 1.1em;
+}
+
+
+
+
+/*-----------------------BUILD YOUR SITE WITH LANDIO SECTION---------------*/
+.build-with-landio > .grey-bg-color{
+	background-color: #F4F5F7;
+}
+
+.build-with-landio h2, .build-with-landio h2 + p{
+	text-align: center;
+}
+
+.build-with-landio h2{
+	font-weight: 600;
+	font-size: 2em;
+	padding-top: 100px;
+}
+
+.build-with-landio p{
+	font-size: 1.2em;
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+
+.build-with-landio img{
+	margin: 0 auto;
+	width: 1099px;
+	display: block;
+}
+
+.advantages-of-landio{
+	display: flex;
+	justify-content: space-between;
+}
+
+.advantages-row{
+	text-align: center;
+	width: 30%;
+}
+
+
 
 /*---------------------POP UP MENU - DODAĆ PÓŹNIEJ------------*/
 
@@ -143,8 +271,15 @@ ul, .search-button{
 
 
 
+
+
+
+
+
+
+
 /*----------------------MEDIA QUERY-------------------*/
-@media (min-width: 1600px){
+/*@media (min-width: 1600px){
 	.container{
 		width: 1500px;
 	}
@@ -178,4 +313,4 @@ ul, .search-button{
 	.profile-button{
 		width: 80px;
 	}
-}
+}*/
