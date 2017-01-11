@@ -23,7 +23,7 @@
 					</ul>
 					<div class="menu-grey-point floatLeft"></div>
 					<button class="floatLeft search-button"><i class="fa fa-search"" aria-hidden="true"></i></button>
-					<div class="profile-button floatLeft">
+					<div class="profile-button floatLeft" id="popUpBttn" onclick="clickToShowProfile()">
 						<img src="img/face5.jpg" alt="" class="floatLeft">
 						<i class="fa fa-angle-down floatLeft" aria-hidden="true"></i>
 					</div>
@@ -31,13 +31,18 @@
 				
 				<div class="clear"></div>
 
-				<div class="pop-up-profile">
-					<img src="" alt="">
-					<p>Joel Fisher</p>
-					<p>mail@gmail.com</p>
+				<div class="pop-up-profile" id="popUpProfile">
+					<img src="img/face5.jpg" alt="" class="floatLeft">
+					<div class="floatLeft name-mail">
+						<p>Joel Fisher</p>
+						<p>mail@gmail.com</p>	
+					</div>
+					<div class="clear"></div>
+					<div class="profile-line"></div>
 					<p>View Posts</p>
 					<p>Manage Groups</p>
 					<p>Subscribction & Billing</p>
+					<p>LOG OUT</p>
 				</div>
 			</nav>
 			
@@ -82,21 +87,27 @@
 		<div class="container">
 			<div class="advantages-of-landio">
 				<div class="advantages-row">
-					<i></i>
+					<div class="i-round-border">
+						<i class="fa fa-pencil" aria-hidden="true"></i>	
+					</div>		
 					<h4>250</h4>
 					<p>UI ELEMENTS</p>
 					<p>Sed risus feugiat fusce eu sit conubia venenatis aliquet nisl cras eu adipiscing ac cras at sem cras per senectus eu parturient quam.</p>
 				</div>
 
 				<div class="advantages-row">
-					<i></i>
+					<div class="i-round-border">
+						<i class="fa fa-bolt" aria-hidden="true"></i>		
+					</div>	
 					<h4>Ultra</h4>
 					<p>MODERN DESIGN</p>
 					<p>Sed risus feugiat fusce eu sit conubia venenatis aliquet nisl cras eu adipiscing ac cras at sem cras per senectus eu parturient quam.</p>
 				</div>
 
 				<div class="advantages-row">
-					<i></i>
+					<div class="i-round-border">
+						<i class="fa fa-heart" aria-hidden="true"></i>		
+					</div>
 					<h4>Free</h4>
 					<p>FOREVER AND EVER</p>
 					<p>Sed risus feugiat fusce eu sit conubia venenatis aliquet nisl cras eu adipiscing ac cras at sem cras per senectus eu parturient quam.</p>
@@ -196,5 +207,7 @@
 			 </p>
 		</div>
 	</footer>
+
+	<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
